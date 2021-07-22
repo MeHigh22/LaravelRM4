@@ -6,13 +6,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link {{request()->is('/')?'active':''}}" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/fruit">Fruits</a>
+          <a class="nav-link {{request()->is('fruit')?'active':''}}" href="/fruit">Fruits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/legume">Legumes</a>
+          <a class="nav-link {{request()->is('legume')?'active':''}}" href="/legume">Legumes</a>
         </li>
       </ul>
     </div>

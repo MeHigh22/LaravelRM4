@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FruitController;
 use App\Http\Controllers\LegumeController;
 use Illuminate\Support\Facades\Route;
