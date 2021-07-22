@@ -1,22 +1,28 @@
 @extends("layouts.index")
 
 @section('content')
-<section class="container">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
 
-            <h6>{{$show->id}}</h6>
-
-            {{-- Cards(title) --}}
-            <h5 class="card-title">{{$show->nom}}</h5>
-
-            {{-- Cards(num) --}}
-            <h6 class="card-subtitle mb-2 text-muted">{{$show->quantity}}</h6>
-            </div>
-            <div class="row d-flex justify-content-around">
-                <a class="btn btn-primary" href="/">Go back</a>
-            </div>
+    <section>
+        <div class="container p-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Retour</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{$show->id}}</th>
+                        <td>{{$show->nom}}</td>
+                        <td>{{$show->quantity}}</td>
+                        <td><a class="btn btn-dark text-white" href="/fruit">Back</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
     </section>
+
 @endsection

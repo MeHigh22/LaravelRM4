@@ -24,5 +24,5 @@ Route::get('/fruit', [FruitController::class, "index"]);
 
 Route::get('/legume', [LegumeController::class, "index"]);
 
-Route::get("/showLegumes", [LegumeController::class, "show"]);
-Route::get("/showFruits", [FruitController::class, "show"]);
+Route::get("/showLegumes/{id}", [LegumeController::class, "show"]);
+Route::get("/showFruits/{id}", [FruitController::class, "show"]);
