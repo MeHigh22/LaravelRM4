@@ -4,7 +4,9 @@
 @section("content")
 <ul>
     @foreach ($fruit as $frui)
-            <li>{{ $frui }}</li>
+    <li>Id:  {{$frui->id}} </li>
+    <li>Nom : {{$frui->nom}} </li>
+    <li>Quantité :  {{$frui->quantity}} </li>
         @endforeach
     </ul>
 @endsection
