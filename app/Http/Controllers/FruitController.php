@@ -15,4 +15,20 @@ class FruitController extends Controller
 
         return view("pages.fruit", compact("fruit"));
     }
+
+    public function show($id)
+    {
+        $show = Fruit::find($id);
+        return view("pages.showFruits", compact('show'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $update = Fruit::find($id);
+        $update->nom = $request->nom;
+        $update->quantity = $request->quantity;
+
+        $update->save();
+        return redirect('/');
+    }
 }
